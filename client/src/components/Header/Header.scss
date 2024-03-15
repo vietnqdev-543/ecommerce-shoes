@@ -1,0 +1,35 @@
+.header-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 80px;
+    margin-bottom: 30px;
+    background-color: black;
+    color: white;
+    .header-logo{
+        text-decoration: none;
+        color: black;
+        background-color: white;
+        padding: 5px 5px;
+        font-size: 25px;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-right: 10px;
+    }
+     .header-nav-item{
+        text-decoration: none;
+        color: white;
+        padding: 0 5px;
+        font-size: 17px;
+    }
+
+    .header-nav-auth .header-nav-item{
+        text-decoration: none;
+        color: white;
+        font-size: 17px;
+    }
+    .header-search{
+        display: flex;
+        justify-content: center;
+    }
+}
