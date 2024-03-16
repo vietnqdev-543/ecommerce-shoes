@@ -1,0 +1,25 @@
+.container{
+    .right{
+        padding: 0 20px;
+        .name{
+            font-size: 25px;
+            color: black;
+            text-transform: uppercase;
+            line-height: 2.3rem;
+            padding:3px 0 5px 0
+        }
+        .brand{
+            color: black;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 50px;
+        }
+        .price{
+            color: darkred;
+            font-size: 37px;
+            padding-bottom: 7px;
+            font-weight: bold;
+        }
+
+    }
+}

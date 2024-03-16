@@ -1,0 +1,25 @@
+
+    
+        .btn-submit{
+            padding: 20px 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    
+
+.input-form{
+    font-size: 15px;
+    padding : 10px;
+    border-radius: 5px;
+}
+@media screen and (max-width: 600px){
+    
+       .form{
+        width: 100%;
+        .form-body{
+         width: 80%;
+        }
+       }
+    
+}

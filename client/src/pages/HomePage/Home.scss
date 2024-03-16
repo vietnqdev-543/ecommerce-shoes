@@ -1,12 +1,11 @@
 .home-container {
-    min-height: 100vh;
+    color: 'black';
     .slider {
         display              : grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-areas  : 'aa aa bb'
-            'aa aa cc'
+                                'aa aa cc'
     }
-
     margin-bottom: 30px;
 
     .item {

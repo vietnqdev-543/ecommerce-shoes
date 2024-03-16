@@ -8,13 +8,13 @@ const HeaderPage = () => {
   return (
   <div className='header-container'>   
         <Row style={{width:'100%' , display:'flex' , alignItems:'center'}}>
-        <Col span={4}>
+        <Col span={5}>
         <div>
-          <Link className='header-logo' to={'/'}>Hyper Sneaker</Link>
+          <Link className='header-logo' to={'/'}>TickTockTreasure</Link>
         </div>
         </Col>
 
-        <Col className="header-search" span={16}> 
+        <Col className="header-search" span={15}> 
           <Input  style={{borderRadius:0, width:'90%', padding:'7px 5px'}} placeholder='Search'/>
           <Button style={{borderRadius:0 , backgroundColor:'black', color:'white', height:'45px'}}> <span><CiSearch /></span></Button>
         </Col>
