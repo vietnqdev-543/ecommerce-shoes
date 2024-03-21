@@ -1,0 +1,14 @@
+.container{
+    max-width: 100%;
+    min-height: 100vh;
+    background-color: blue;
+    .aside{
+        width: 100%;
+        min-height: 100vh;
+    }
+    .content{
+        width: 100%;
+        min-height: 100vh;
+        background-color: #f0ebeb;
+    }
+}

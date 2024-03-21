@@ -1,4 +1,3 @@
-import React from 'react';
 import {
   createBrowserRouter,
   RouterProvider,
@@ -14,6 +13,10 @@ import ProductPage from './pages/ProductPage/ProductPage'
 import { useLocation } from 'react-router-dom';
 import Marquee from './components/Marquee/Marquee';
 import ProductDetailsPage from './pages/ProductDetails/ProductDetailsPage';
+import Adminpage from './pages/ADMIN/AdminPage/Adminpage';
+import AdminProductPage from "./pages/ADMIN/AdminProduct/AdminProductPage";
+import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute";
+
 
 const Layout = ()=> {
   const location = useLocation()
@@ -22,19 +25,25 @@ const Layout = ()=> {
   const styleLayout = {
     padding:'0 5%'
   }
-return (
-  <>
-  {!isLoginPage && !isRegisterPage && (<Marquee />)}
-    {!isLoginPage && !isRegisterPage && ( <HeaderPage /> )}
+  return (
+    <>
+      {!isLoginPage && !isRegisterPage && (<Marquee />)}
+      {!isLoginPage && !isRegisterPage && ( <HeaderPage /> )}
       <div style={styleLayout}>
-      <Outlet />
+        <Outlet />
       </div>
-    {!isLoginPage && !isRegisterPage && <FooterPage />}
-  </>
-)
+      {!isLoginPage && !isRegisterPage && <FooterPage />}
+    </>
+  )
+}
+const LayoutAdmin = () => {
+  return (
+    <Outlet />
+  );
 }
 
 function App() {
+  
   const router = createBrowserRouter([
     {
       path: "/",
@@ -45,7 +54,19 @@ function App() {
         { path: 'login', element: <LoginPage /> },
         { path: 'register', element: <RegisterPage /> },
         { path: 'product', element: <ProductPage /> },
-        {path : 'productDetails' , element: <ProductDetailsPage />}
+        { path: 'productDetails', element: <ProductDetailsPage /> },
+      ]
+    } ,
+    {
+      path : '/admin',
+      element: <LayoutAdmin /> ,
+      errorElement : <NotFound />,
+      children : [
+        { index: true, element: 
+        <ProtectedRoute>
+          <Adminpage />
+        </ProtectedRoute> },
+        { path: 'adminProduct', element: <AdminProductPage /> }
       ]
     }
   ]);
